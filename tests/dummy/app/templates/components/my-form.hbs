@@ -1,0 +1,47 @@
+<form class="{{if submitted 'submitted' 'unsubmitted'}}" id="myForm">
+
+  <!-- login form / password -->
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12">
+      {{#form-group class="has-feedback" hasError=form.$status.firstName.invalid}}
+        <label for="firstName">First name</label>
+        {{input value=form.firstName class="form-control" id="firstName"}}
+        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <p class="error">
+          {{{form.errors.firstName.firstObject}}}
+        </p>
+      {{/form-group}}
+    </div>
+  </div>
+
+  <!-- login form / email -->
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12">
+      {{form.$status.email.valid}}
+      {{#form-group class="has-feedback" hasError=form.$status.email.invalid}}
+        <label for="email">Email address</label>
+        {{input type="text" value=form.email class="form-control" id="email"}}
+        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        <p class="error" id="loginForm-email-error">
+          {{{form.errors.email.firstObject}}}
+        </p>
+      {{/form-group}}
+    </div>
+  </div>
+
+  <!-- login form / submit -->
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12">
+      <div class="form-group">
+        <button type="submit"
+            class="btn btn-primary"
+            {{action "submit"}}>
+          <span class="fa fa-angle-right" aria-hidden="true"></span>
+          Log in
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
