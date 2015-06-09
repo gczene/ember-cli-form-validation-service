@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-form-validation-service",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember CLI form validation",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,14 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
-  "engines": {
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/gczene/ember-cli-form-validation-service"
+    },
+    "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Gabor Czene",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -34,7 +37,9 @@
     "ember-try": "0.0.4"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember validation",
+    "ember form validation"
   ],
   "dependencies": {
     "ember-cli-babel": "^4.0.0",

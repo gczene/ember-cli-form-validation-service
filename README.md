@@ -264,9 +264,7 @@ It follows `bootstrap` conventions and will decorate the `form-group` classed di
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install ember-cli-form-validation-service --save`
 
 ## Running
 
